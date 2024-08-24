@@ -1,0 +1,6 @@
+
+venv/
+
+inputs_backend/inputs_backend/__pycache__/
+
+inputs_frontend/.vscode/

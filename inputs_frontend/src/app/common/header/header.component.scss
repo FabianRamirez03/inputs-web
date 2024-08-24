@@ -1,0 +1,38 @@
+.custom-navbar {
+    background-color: #769793; /* Color de fondo personalizado */
+    color: #ffffff; /* Color del texto */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    padding: 0 1rem; /* Espaciado horizontal dentro de la barra */
+    width: 100%; /* Asegura que la barra ocupe el ancho completo de la página */
+    height: 80px; /* Ajusta la altura según tus necesidades */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del elemento */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+.custom-navbar .navbar-dropdowm-item{
+    background-color: #769793; /* Color de fondo personalizado */
+    color: #ffffff; /* Color del texto */
+    
+}
+
+.custom-navbar .navbar-logo {
+    height: 90%; /* Ocupa el 90% de la altura del navbar */
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #ffffff; /* Color de texto para enlaces */
+}
+
+.custom-navbar .container {
+    width: 100%; /* Asegura que el contenido ocupe el ancho completo de la barra */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+}
