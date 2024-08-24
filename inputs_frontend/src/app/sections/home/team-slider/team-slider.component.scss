@@ -1,0 +1,55 @@
+.team4 {
+    .container {
+      .row {
+        justify-content: center;
+        
+        .col-lg-3 {
+          .row {
+            .col-md-12 {
+              display: flex;
+              justify-content: center; /* Centra horizontalmente */
+              align-items: center; /* Centra verticalmente */
+              
+              img {
+                width: 35vh; /* Ajusta el ancho fijo */
+                height: 35vh; /* Ajusta la altura fija */
+                border-radius: 50%; /* Hace que la imagen sea circular */
+                object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+              }
+            }
+            
+            .text-center {
+              text-align: center;
+              
+              h5, h6 {
+                margin-top: 0.5rem; /* Ajusta el margen superior */
+                margin-bottom: 0.5rem; /* Ajusta el margen inferior */
+              }
+              
+              p {
+                margin-bottom: 1rem; /* Ajusta el margen inferior */
+              }
+              
+              ul.list-inline {
+                padding-left: 0;
+                margin-bottom: 0;
+                
+                .list-inline-item {
+                  margin-right: 0.5rem; /* Ajusta el espacio entre los íconos sociales */
+                  
+                  a {
+                    font-size: 1.2rem; /* Ajusta el tamaño de los íconos sociales */
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon-color {
+    color: #00695c; /* Color personalizado */
+  }
+  
