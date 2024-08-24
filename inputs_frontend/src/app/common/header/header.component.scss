@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    
+    transition: top 0.3s ease-in-out; /* Transición suave para el efecto de ocultar/mostrar */
 }
 
 .custom-navbar .navbar-dropdowm-item{
@@ -35,4 +35,12 @@
     width: 100%; /* Asegura que el contenido ocupe el ancho completo de la barra */
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
+}
+
+.header-hidden {
+    top: -80px; /* Mueve el header fuera de la vista */
+}
+
+.header-visible {
+    top: 0; /* Muestra el header */
 }
