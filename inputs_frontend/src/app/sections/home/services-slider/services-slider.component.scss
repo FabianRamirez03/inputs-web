@@ -1,0 +1,92 @@
+.services-slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .services-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .services-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 16px; /* Ajusta el espacio entre las tarjetas si es necesario */
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .services-slider .card {
+    flex: 0 0 auto;
+    width: 18rem; /* Ancho fijo para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+    margin: 0 8px; /* Espacio alrededor de cada tarjeta */
+    height: 100%; /* Altura fija del 30% de la altura de la pantalla */
+    overflow: hidden; /* Oculta el contenido que excede la altura */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: 200px; /* Altura fija para la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionar la relación de aspecto */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%; /* Usa el resto de la altura de la tarjeta */
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    line-height: 1.2; /* Ajusta la altura de línea para que se ajuste a 4 renglones */
+    max-height: calc(1.2rem * 4); /* Altura máxima para 4 renglones */
+    height: calc(1.2rem * 4); 
+    overflow: hidden; /* Oculta el texto que excede el espacio definido */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita el número de líneas visibles a 4 */
+    -webkit-box-orient: vertical;
+    display: box;
+    line-clamp: 4; /* Para compatibilidad futura y estándares */
+    box-orient: vertical;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5; /* Ajusta la altura de línea para que se ajuste a 4 renglones */
+    max-height: calc(1.5rem * 4); /* Altura máxima para 4 renglones */
+    height: calc(1.5rem * 4);
+    overflow: hidden; /* Oculta el texto que excede el espacio definido */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limita el número de líneas visibles a 4 */
+    -webkit-box-orient: vertical;
+    line-clamp: 4;
+  }
+  
+  .btn {
+    margin-top: auto; /* Asegura que el botón esté al final de la tarjeta */
+  }
+  
+
+  .btn-primary {
+    background-color: #00695c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004d40;
+  }
+  
