@@ -15,6 +15,13 @@
     transition: top 0.3s ease-in-out; /* Transición suave para el efecto de ocultar/mostrar */
 }
 
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* Asegura que el menú aparezca justo debajo del enlace */
+}
+.nav-item.dropdown .dropdown-toggle::after {
+    content: none; /* Quita la flecha desplegable para que no sugiera que solo se activa con clic */
+}
 .custom-navbar .navbar-dropdowm-item{
     background-color: #769793; /* Color de fondo personalizado */
     color: #ffffff; /* Color del texto */
