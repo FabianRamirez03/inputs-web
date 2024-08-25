@@ -14,7 +14,6 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: top 0.3s ease-in-out; /* Transición suave para el efecto de ocultar/mostrar */
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -43,7 +42,9 @@
 .custom-navbar .container {
     width: 100%; /* Asegura que el contenido ocupe el ancho completo de la barra */
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    justify-items: center;
 }
 
 .header-hidden {

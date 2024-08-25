@@ -1,3 +1,4 @@
+@import '../../../../../public/colors';
 .services-slider-container {
     display: flex;
     align-items: center;
@@ -78,15 +79,21 @@
   
 
   .btn-primary {
-    background-color: #00695c;
+    background-color: $color-blue;
     border: none;
-    color: white;
+    color: $color-white;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
   }
   
   .btn-primary:hover {
-    background-color: #004d40;
+    background-color: $color-light-blue;
   }
+
+  .text-center {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
   
