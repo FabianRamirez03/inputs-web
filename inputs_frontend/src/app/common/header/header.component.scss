@@ -1,6 +1,8 @@
+@import '../../../../public/colors';
+
 .custom-navbar {
-    background-color: #769793; /* Color de fondo personalizado */
-    color: #ffffff; /* Color del texto */
+    background-color: $color-blue; /* Color de fondo personalizado */
+    color: $color-white; /* Color del texto */
     display: flex; /* Usa flexbox para distribuir los elementos */
     align-items: center; /* Alinea verticalmente los elementos en el centro */
     justify-content: space-between; /* Distribuye el espacio entre los elementos */
@@ -18,14 +20,14 @@
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0; /* Asegura que el menú aparezca justo debajo del enlace */
+    background-color: $color-blue;
 }
 .nav-item.dropdown .dropdown-toggle::after {
     content: none; /* Quita la flecha desplegable para que no sugiera que solo se activa con clic */
 }
 .custom-navbar .navbar-dropdowm-item{
-    background-color: #769793; /* Color de fondo personalizado */
-    color: #ffffff; /* Color del texto */
-    
+    background-color: $color-blue; /* Color de fondo personalizado */
+    color: $color-white; /* Color del texto */
 }
 
 .custom-navbar .navbar-logo {
@@ -35,7 +37,7 @@
 
 .custom-navbar .navbar-brand,
 .custom-navbar .nav-link {
-    color: #ffffff; /* Color de texto para enlaces */
+    color: $color-white; /* Color de texto para enlaces */
 }
 
 .custom-navbar .container {

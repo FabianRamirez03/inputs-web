@@ -1,0 +1,35 @@
+<div class="clinic-location py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Location Details -->
+        <div class="col-md-5 mb-4 text-center">
+          <h3 class="mb-3">Nuestra Ubicación</h3>
+          <p>Dirección de la clínica: Calle Rubén Darío, Heredia, Costa Rica</p>
+          <div class="mb-2">
+            <a [href]="googleMapsUrl" target="_blank" class="btn btn-primary mb-2">
+                <i class="bi bi-geo-alt"></i> Ver en Google Maps
+              </a>
+              <a [href]="wazeUrl" target="_blank" class="btn btn-primary mb-2">
+                <i class="bi bi-map"></i> Ver en Waze
+              </a>
+          </div>
+          <div class="mt-4">
+            <img [src]="clinicImage" alt="Imagen de la clínica" class="img-fluid rounded max-size"/>
+          </div>
+        </div>
+        <!-- Google Maps Embed -->
+        <div class="col-md-7 p-0">
+          <div class="iframe-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.187641548099!2d-84.12024562430246!3d10.00135397301013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0fbec690fda61%3A0x3f77abe0414a3f5a!2sInputs%20Salud!5e0!3m2!1ses!2scr!4v1724525086197!5m2!1ses!2scr" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -18,7 +18,7 @@ export class TeamSliderComponent {
       image: 'general/team/marian.jpg',
       socialLinks: [
         { platform: 'facebook', url: '#' },
-        { platform: 'instagram', url: '#' },
+        { platform: 'instagram', url: 'https://www.instagram.com/marian.terapiafisica' },
         { platform: 'tiktok', url: '#' }
       ]
     },
@@ -29,10 +29,22 @@ export class TeamSliderComponent {
       image: 'general/team/Esteban.jpg',
       socialLinks: [
         { platform: 'facebook', url: '#' },
+        { platform: 'instagram', url: 'https://www.instagram.com/fisio.esteban' },
+        { platform: 'tiktok', url: '#' }
+      ]
+    },
+    {
+      name: 'MariLau',
+      position: 'Fisioterapeuta',
+      description: 'Donec eget nisi eu quam fermentum aliquet. Morbi dignissim accumsan purus nec rhoncus.',
+      image: 'general/team/MariLau.jpg',
+      socialLinks: [
+        { platform: 'facebook', url: '#' },
         { platform: 'instagram', url: '#' },
         { platform: 'tiktok', url: '#' }
       ]
     },
+    
     
   ];
 
