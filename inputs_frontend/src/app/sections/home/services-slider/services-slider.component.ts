@@ -26,7 +26,7 @@ export class ServicesSliderComponent {
           title: service.name,
           description: service.summary,
           image: service.image,
-          link: `/servicio-${service.index}`
+          link: `/servicios/${service.name.replace(/\s+/g, '-').toLowerCase()}`
         }));
       },
       (error) => {

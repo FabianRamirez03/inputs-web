@@ -20,4 +20,9 @@ export class RestApiService {
   getServicesNoBody(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/serviciosSinCuerpo`);
   }
+
+  // Método para obtener los terapeutas
+  getServices(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/servicios`);
+  }
 }

@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./common/header/header.component";
 import { FooterComponent } from "./common/footer/footer.component";
 import { LandingPageComponent } from "./sections/home/landing-page/landing-page.component";
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import { LandingPageComponent } from "./sections/home/landing-page/landing-page.
     CommonModule,
     HeaderComponent,
     FooterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    MarkdownModule
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
