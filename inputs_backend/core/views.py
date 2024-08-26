@@ -27,3 +27,42 @@ def get_terapeuta(request):
         return JsonResponse(terapeutas_sorted, safe=False)
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+
+
+def get_services(request):
+    try:
+        # Obtiene la colección 'servicios'
+        servicios_ref = db.collection("servicios")
+        docs = servicios_ref.stream()
+
+        # Convierte los documentos en una lista de diccionarios
+        servicios = [doc.to_dict() for doc in docs]
+
+        # Ordena la lista de terapeutas por el campo 'index' en orden ascendente
+        servicios_sorted = sorted(servicios, key=lambda t: t.get("index", 0))
+
+        # Retorna la lista ordenada como una respuesta JSON
+        return JsonResponse(servicios_sorted, safe=False)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
+
+def get_services_without_body(request):
+    try:
+        # Obtiene la colección 'servicios'
+        servicios_ref = db.collection("servicios")
+        docs = servicios_ref.stream()
+
+        # Convierte los documentos en una lista de diccionarios y excluye el campo 'body'
+        servicios = [
+            {key: value for key, value in doc.to_dict().items() if key != "body"}
+            for doc in docs
+        ]
+
+        # Ordena la lista de servicios por el campo 'index' en orden ascendente
+        servicios_sorted = sorted(servicios, key=lambda t: t.get("index", 0))
+
+        # Retorna la lista ordenada como una respuesta JSON
+        return JsonResponse(servicios_sorted, safe=False)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)

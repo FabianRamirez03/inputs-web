@@ -1,5 +1,5 @@
 from django.urls import path
-from core.views import get_terapeuta
+from core.views import get_terapeuta, get_services, get_services_without_body
 
 """
 URL configuration for inputs_backend project.
@@ -23,4 +23,10 @@ from django.urls import path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("terapeuta/", get_terapeuta, name="get_terapeuta"),
+    path("servicios/", get_services, name="get_services"),
+    path(
+        "serviciosSinCuerpo/",
+        get_services_without_body,
+        name="get_services_without_body",
+    ),
 ]

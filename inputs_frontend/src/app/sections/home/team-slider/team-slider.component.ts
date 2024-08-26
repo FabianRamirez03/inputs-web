@@ -11,7 +11,6 @@ import { RestApiService } from '../../../services/rest-api.service';
 })
 export class TeamSliderComponent implements OnInit {
 
-  private apiUrl = 'http://127.0.0.1:8000/terapeuta';
 
   teamMembers: any[] = [];
 
