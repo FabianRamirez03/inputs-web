@@ -1,38 +1,56 @@
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+  />
 </head>
 
 <div class="py-5 team4" id="equipo">
-    <div class="container">
-      <div class="row justify-content-center mb-4">
-        <div class="col-md-7 text-center">
-          <h3 class="mb-3">Nuestro equipo</h3>
-          <h6 class="subtitle">Proin vel tristique ex. Ut porttitor tempor metus sit amet tincidunt. </h6>
-        </div>
+  <div class="container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-7 text-center">
+        <h3 class="mb-3">Nuestro equipo</h3>
+        <h6 class="subtitle">
+          Proin vel tristique ex. Ut porttitor tempor metus sit amet tincidunt.
+        </h6>
       </div>
-      <div class="row">
-        <div class="col-lg-3 mb-4" *ngFor="let member of teamMembers">
-          <div class="row">
-            <div class="col-md-12">
-              <img [src]="member.image" alt="{{member.name}}" class="img-fluid rounded-circle" />
-            </div>
-            <div class="col-md-12 text-center">
-              <div class="pt-2">
-                <h5 class="mt-4 font-weight-medium mb-0">{{member.name}}</h5>
-                <h6 class="subtitle mb-3">{{member.position}}</h6>
-                <p>{{member.description}}</p>
-                <ul class="list-inline">
-                  <li class="list-inline-item" *ngFor="let link of member.socialLinks">
-                    <a [href]="link.url" class="text-decoration-none d-block px-1">
-                        <i [ngClass]="['bi', 'bi-' + link.platform, 'icon-color']"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 mb-4" *ngFor="let member of teamMembers">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              [src]="member.image"
+              alt="{{ member.name }}"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+          <div class="col-md-12 text-center">
+            <div class="pt-2">
+              <h5 class="mt-4 font-weight-medium mb-0">{{ member.name }}</h5>
+              <h6 class="subtitle mb-3">{{ member.position }}</h6>
+              <p>{{ member.description }}</p>
+              <ul class="list-inline">
+                <li
+                  class="list-inline-item"
+                  *ngFor="let link of member.socialLinks"
+                >
+                  <a
+                    [href]="link.url"
+                    class="text-decoration-none d-block px-1"
+                    target="_blank"
+                    *ngIf="link.url"
+                  >
+                    <i
+                      [ngClass]="['bi', 'bi-' + link.platform, 'icon-color']"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

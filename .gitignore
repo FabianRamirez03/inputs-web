@@ -4,3 +4,7 @@ venv/
 inputs_backend/inputs_backend/__pycache__/
 
 inputs_frontend/.vscode/
+
+inputs_backend/inputscr-db-firebase-adminsdk-jpja4-a043fea83b.json
+
+inputs_backend/core/__pycache__/

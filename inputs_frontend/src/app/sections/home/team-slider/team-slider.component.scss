@@ -1,4 +1,6 @@
+@import '../../../../../public/colors';
 .team4 {
+  background-color: $color-white;
     .container {
       .row {
         justify-content: center;
@@ -50,6 +52,6 @@
   }
 
   .icon-color {
-    color: #00695c; /* Color personalizado */
+    color: $color-blue; /* Color personalizado */
   }
   

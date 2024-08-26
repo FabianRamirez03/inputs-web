@@ -1,51 +1,45 @@
-import { NgClass, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { RestApiService } from '../../../services/rest-api.service';
 
 @Component({
   selector: 'app-team-slider',
   standalone: true,
-  imports: [NgClass, NgFor],
+  imports: [NgClass, NgFor, NgIf],
   templateUrl: './team-slider.component.html',
-  styleUrl: './team-slider.component.scss'
+  styleUrls: ['./team-slider.component.scss']
 })
-export class TeamSliderComponent {
-  teamMembers = [
-    {
-      name: 'Marian Chaves',
-      position: 'Fisioterapeuta',
-      description: 'Fusce lobortis, quam auctor ornare eleifend, nisi tellus ornare diam, at porttitor diam urna nec magna.',
-      image: 'general/team/marian.jpg',
-      socialLinks: [
-        { platform: 'facebook', url: '#' },
-        { platform: 'instagram', url: 'https://www.instagram.com/marian.terapiafisica' },
-        { platform: 'tiktok', url: '#' }
-      ]
-    },
-    {
-      name: 'Esteban Ramírez',
-      position: 'Fisioterapeuta',
-      description: 'Donec eget nisi eu quam fermentum aliquet. Morbi dignissim accumsan purus nec rhoncus.',
-      image: 'general/team/Esteban.jpg',
-      socialLinks: [
-        { platform: 'facebook', url: '#' },
-        { platform: 'instagram', url: 'https://www.instagram.com/fisio.esteban' },
-        { platform: 'tiktok', url: '#' }
-      ]
-    },
-    {
-      name: 'MariLau',
-      position: 'Fisioterapeuta',
-      description: 'Donec eget nisi eu quam fermentum aliquet. Morbi dignissim accumsan purus nec rhoncus.',
-      image: 'general/team/MariLau.jpg',
-      socialLinks: [
-        { platform: 'facebook', url: '#' },
-        { platform: 'instagram', url: '#' },
-        { platform: 'tiktok', url: '#' }
-      ]
-    },
-    
-    
-  ];
+export class TeamSliderComponent implements OnInit {
 
+  private apiUrl = 'http://127.0.0.1:8000/terapeuta';
+
+  teamMembers: any[] = [];
+
+  constructor(private restApiService: RestApiService) {}
+
+  ngOnInit(): void {
+    this.loadTeamMembers();
+  }
+
+  loadTeamMembers(): void {
+    this.restApiService.getTerapeutas().subscribe(
+      (data) => {
+        this.teamMembers = data.map(member => ({
+          name: member.name,
+          position: member.position,
+          description: member.description,
+          image: member.image.replace('gs://inputscr-db.appspot.com/', 'https://storage.googleapis.com/inputscr-db.appspot.com/'),
+          socialLinks: [
+            { platform: 'facebook', url: member.socialLinks.facebook || null },
+            { platform: 'instagram', url: member.socialLinks.instagram || null },
+            { platform: 'tiktok', url: member.socialLinks.tiktok || null }
+          ].filter(link => link.url && link.url.trim() !== '') // Filtrar enlaces vacíos
+        }));
+        console.log('Team members loaded:', this.teamMembers);
+      },
+      (error) => {
+        console.error('Error loading team members:', error);
+      }
+    );
+  }
 }

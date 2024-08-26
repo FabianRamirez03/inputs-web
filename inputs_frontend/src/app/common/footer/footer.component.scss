@@ -1,3 +1,5 @@
+@import '../../../../public/colors';
+
 html, body {
     height: 100%; /* Asegura que el cuerpo y el HTML ocupen todo el alto de la ventana */
     margin: 0; /* Elimina el margen por defecto */
@@ -6,29 +8,40 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    margin: 0; /* Elimina márgenes de body */
+    padding: 0; /* Elimina padding de body */
 }
 
 .container {
     flex: 1; /* Permite que el contenedor principal ocupe todo el espacio disponible */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
 }
 
 footer {
-    background-color: #f8f9fa; /* Color de fondo del footer (opcional) */
-    border-top: 1px solid #eaeaea; /* Línea superior del footer (opcional) */
+    background-color: $color-blue; /* Color de fondo del footer */
+    border-top: 1px solid $color-white; /* Línea superior del footer */
     padding: 1rem 0; /* Espaciado vertical dentro del footer */
     text-align: center; /* Centra el texto en el footer */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    height: 100%; /* Asegura que el footer ocupe todo el ancho */
+    margin: 0; /* Elimina cualquier margen predeterminado */
 }
 
 .custom-footer {
-    background-color: #769793; /* Color de fondo personalizado */
-    border-top: 1px solid #eaeaea; /* Línea superior opcional para el footer */
+    background-color: $color-blue; /* Color de fondo personalizado */
+    border-top: 1px solid $color-white; /* Línea superior opcional para el footer */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0; /* Elimina padding innecesario */
+    height: 100%; /* Asegura que el footer ocupe todo el ancho */
 }
 
 .custom-text {
-    color: #f8f9fa; /* Color del texto */
+    color: $color-white; /* Color del texto */
 }
 
 .custom-link img {
     width: 40px; /* Ajusta el ancho de la imagen del logo */
-    height: 32px; /* Ajusta la altura de la imagen del logo */
+    height: 40px; /* Ajusta la altura de la imagen del logo */
 }
+

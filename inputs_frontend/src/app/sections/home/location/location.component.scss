@@ -1,3 +1,5 @@
+@import '../../../../../public/colors';
+
 .clinic-location {
     .iframe-container {
       position: relative;
@@ -17,7 +19,7 @@
     }
   
     .btn-primary {
-      background-color: #00695c;
+      background-color: $color-blue;
       border: none;
       color: white;
       padding: 10px 10px;
@@ -27,7 +29,7 @@
       cursor: pointer;
       
       &:hover {
-        background-color: #004d40;
+        background-color: $color-light-blue;
       }
     }
   
