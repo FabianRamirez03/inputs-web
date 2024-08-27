@@ -1,0 +1,1 @@
+web: gunicorn inputs_backend.wsgi --log-file -
