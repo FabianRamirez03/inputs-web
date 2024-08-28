@@ -5,12 +5,14 @@ import { NgIf } from '@angular/common';
 import { MarkdownModule, MarkdownService } from 'ngx-markdown';
 import { marked } from 'marked';
 import { HttpClient } from '@angular/common/http';
+import { HeaderComponent } from "../../../common/header/header.component";
+import { FooterComponent } from "../../../common/footer/footer.component";
 
 
 @Component({
   selector: 'app-service-info',
   standalone: true,
-  imports: [NgIf, MarkdownModule],
+  imports: [NgIf, MarkdownModule, HeaderComponent, FooterComponent],
   providers: [MarkdownService],
   templateUrl: './service-info.component.html',
   styleUrls: ['./service-info.component.scss'],

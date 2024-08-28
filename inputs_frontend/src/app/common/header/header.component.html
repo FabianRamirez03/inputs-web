@@ -20,12 +20,14 @@
       id="navbarsExample08"
     >
       <ul class="navbar-nav">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/inicio">
           <img src="logos/Recurso 72@300x.png" alt="" width="200" />
         </a>
 
         <li class="nav-item">
-          <a class="nav-link active" href="#AboutUs">¿Qué es Inputs?</a>
+          <a class="nav-link active" (click)="navigateToWithId('AboutUs')"
+            >¿Qué es Inputs?</a
+          >
         </li>
         <li class="nav-item dropdown">
           <a
@@ -36,21 +38,31 @@
             >Servicios</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Terapia física</a></li>
             <li>
-              <a class="dropdown-item" href="#"
+              <a class="dropdown-item" href="/inicio">Terapia física</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/inicio"
                 >Entrenamiento para Adulto Mayor</a
               >
             </li>
-            <li><a class="dropdown-item" href="#">Masajes</a></li>
-            <li><a class="dropdown-item" href="#">Madero terapia</a></li>
+            <li>
+              <a class="dropdown-item" href="/inicio">Masajes</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="/inicio">Madero terapia</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#equipo">Equipo de trabajo</a>
+          <a class="nav-link active" (click)="navigateToWithId('equipo')"
+            >Equipo de trabajo</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#ubicacion">Ubicación</a>
+          <a class="nav-link active" (click)="navigateToWithId('ubicacion')"
+            >Ubicación</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Blog</a>
@@ -58,6 +70,11 @@
         <li class="nav-item">
           <a class="nav-link active" href="/PreguntasFrecuentes"
             >Preguntas frecuentes</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="navigateToWithId('ubicacion')"
+            >Galeria</a
           >
         </li>
       </ul>

@@ -35,7 +35,6 @@ export class TeamSliderComponent implements OnInit {
             { platform: 'tiktok', url: member.socialLinks.tiktok || null }
           ].filter(link => link.url && link.url.trim() !== '') // Filtrar enlaces vacíos
         }));
-        console.log('Team members loaded:', this.teamMembers);
       },
       (error) => {
         console.error('Error loading team members:', error);
