@@ -1,18 +1,47 @@
 @import '../../../../public/colors';
 
 body {
-    padding-bottom: 20px;
+    padding-top: 6vh;
   }
   
   .navbar {
-    margin-bottom: 20px;
     background-color: $color-blue;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 5000; /* Aumentar el z-index para asegurarse de que esté delante de todo */
+    display: flex;
+    align-items: center;
   }
   
 .navbar-dark {
     background-color: $color-blue;
 }
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center; // Centra el contenido verticalmente
+  margin-left: 20px; // Ajusta el valor según el espaciado deseado
+  margin-right: 20px; // Ajusta el valor según el espaciado deseado
+  font-size: large;
+}
 
 .navbar-dark {
     background-color: $color-blue;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 5000 !important;
+  top: 100%;
+  background-color: $color-white;
+}
+
+.dropdown-item {
+  z-index: 2000 !important;
+  background-color: $color-white;
+  &:hover {
+    background-color: $color-grey; // Cambia el color de fondo al pasar el ratón
+  }
+
+  
 }

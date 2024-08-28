@@ -9,14 +9,13 @@ import { Component } from '@angular/core';
 })
 export class LocationComponent {
   // Coordenadas de la clínica
-  latitude = 10.001380653992486; // Ejemplo de latitud
-  longitude = -84.11767287224917; // Ejemplo de longitud
+  latitude = 10.001380653992486;
+  longitude = -84.11767287224917; 
 
   // URLs para Google Maps y Waze
   googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${this.latitude},${this.longitude}`;
   wazeUrl = `https://waze.com/ul?ll=${this.latitude},${this.longitude}&navigate=yes`;
 
-  // URL de la imagen de la clínica
-  clinicImage = 'general/location/clinicaExterior.jpg'; // Cambia la ruta según sea necesario
+  clinicImage = 'general/location/clinica.webp'; 
 
 }

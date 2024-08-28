@@ -1,13 +1,17 @@
-<div>
-  <h2 class="text-center">Servicios</h2>
+<div class="py-5 team4">
+  <h2 class="text-center" id="servicios">Servicios</h2>
   <div class="services-slider-container">
     <div class="services-slider-wrapper">
       <div class="services-slider">
         <div class="card" *ngFor="let service of services">
-          <img [src]="service.image" class="card-img-top" alt="{{service.title}}">
+          <img
+            [src]="service.image"
+            class="card-img-top"
+            alt="{{ service.title }}"
+          />
           <div class="card-body">
-            <h5 class="card-title">{{service.title}}</h5>
-            <p class="card-text">{{service.description}}</p>
+            <h5 class="card-title">{{ service.title }}</h5>
+            <p class="card-text">{{ service.description }}</p>
             <a [href]="service.link" class="btn btn-primary">Más información</a>
           </div>
         </div>

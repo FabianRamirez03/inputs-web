@@ -13,7 +13,10 @@ export class WelcomeImageComponent {
   constructor(private router: Router) {}
 
   navigateToServices() {
-    this.router.navigate(['/servicios']);
+    const element = document.getElementById('servicios');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+    }
   }
 
 }
