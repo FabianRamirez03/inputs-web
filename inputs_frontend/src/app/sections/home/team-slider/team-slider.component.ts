@@ -29,6 +29,7 @@ export class TeamSliderComponent implements OnInit {
           description: member.description,
           image: member.image.replace('gs://inputscr-db.appspot.com/', 'https://storage.googleapis.com/inputscr-db.appspot.com/'),
           socialLinks: [
+            { platform: 'whatsapp', url: member.socialLinks.whatsapp || null },
             { platform: 'facebook', url: member.socialLinks.facebook || null },
             { platform: 'instagram', url: member.socialLinks.instagram || null },
             { platform: 'tiktok', url: member.socialLinks.tiktok || null }
