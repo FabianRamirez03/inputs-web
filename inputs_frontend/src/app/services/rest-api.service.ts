@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RestApiService {
 
-  private baseUrl = 'https://inputs-backend-325938311fee.herokuapp.com';
+  // private baseUrl = 'https://inputs-backend-325938311fee.herokuapp.com';
+  private baseUrl = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) { }
 
@@ -24,5 +25,10 @@ export class RestApiService {
   // Método para obtener los terapeutas
   getServices(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/servicios`);
+  }
+
+  // Método para enviar los datos del formulario
+  sendContactForm(data: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/contactForm/`, data); // Asegúrate de que la URL es correcta
   }
 }
