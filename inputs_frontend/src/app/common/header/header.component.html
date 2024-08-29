@@ -38,19 +38,10 @@
             >Servicios</a
           >
           <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="/inicio">Terapia física</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="/inicio"
-                >Entrenamiento para Adulto Mayor</a
-              >
-            </li>
-            <li>
-              <a class="dropdown-item" href="/inicio">Masajes</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="/inicio">Madero terapia</a>
+            <li *ngFor="let service of services">
+              <a class="dropdown-item" [href]="service.link">{{
+                service.title
+              }}</a>
             </li>
           </ul>
         </li>

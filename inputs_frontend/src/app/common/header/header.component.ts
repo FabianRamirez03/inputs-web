@@ -1,20 +1,27 @@
-import { Component, AfterViewInit  } from '@angular/core';
+import { Component, AfterViewInit, OnInit  } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { RestApiService } from '../../services/rest-api.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements AfterViewInit  {
+export class HeaderComponent implements AfterViewInit, OnInit  {
+  constructor(private router: Router, private restApiService: RestApiService) {}
+  
+  services: any[] = [];
+  ngOnInit(): void {
+    this.loadServices();
+  }
 
   ngAfterViewInit(): void {
   }
 
-  constructor(private router: Router) {}
+  
 
   navigateTo(path: string): void {
     this.router.navigate([path]).then(success => {
@@ -44,6 +51,23 @@ export class HeaderComponent implements AfterViewInit  {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+
+  loadServices(): void {
+    this.restApiService.getServicesNoBody().subscribe(
+      (data) => {
+        this.services = data.map(service => ({
+          title: service.name,
+          description: service.summary,
+          image: service.image,
+          link: `/servicios/${service.name.replace(/\s+/g, '-').toLowerCase()}`
+        }));
+      },
+      (error) => {
+        console.error('Error loading services:', error);
+      }
+    );
+  }  
 
 
 }
