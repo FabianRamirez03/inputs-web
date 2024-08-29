@@ -1,18 +1,15 @@
 @import '../../../../public/colors';
 
-body {
-    padding-top: 6vh;
-  }
   
-  .navbar {
-    background-color: $color-blue;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 5000; /* Aumentar el z-index para asegurarse de que esté delante de todo */
-    display: flex;
-    align-items: center;
-  }
+.navbar {
+  background-color: $color-blue;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 5000; /* Aumentar el z-index para asegurarse de que esté delante de todo */
+  display: flex;
+  align-items: center;
+}
   
 .navbar-dark {
     background-color: $color-blue;

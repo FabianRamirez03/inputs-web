@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class RestApiService {
 
-  // private baseUrl = 'https://inputs-backend-325938311fee.herokuapp.com';
-  private baseUrl = 'http://127.0.0.1:8000';
+  private baseUrl = 'https://inputs-backend-325938311fee.herokuapp.com';
+  // private baseUrl = 'http://127.0.0.1:8000';
 
   constructor(private http: HttpClient) { }
 

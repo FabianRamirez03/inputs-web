@@ -5,6 +5,7 @@ import { HeaderComponent } from "./common/header/header.component";
 import { FooterComponent } from "./common/footer/footer.component";
 import { LandingPageComponent } from "./sections/home/landing-page/landing-page.component";
 import { MarkdownModule } from 'ngx-markdown';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { MarkdownModule } from 'ngx-markdown';
     HeaderComponent,
     FooterComponent,
     LandingPageComponent,
-    MarkdownModule
+    MarkdownModule,
+    ReactiveFormsModule
 ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
