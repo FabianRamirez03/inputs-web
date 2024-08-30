@@ -1,55 +1,68 @@
 .markdown-body {
-    padding: 20px; /* Agrega padding alrededor del contenido Markdown */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;/* Asegura una fuente legible */
-    line-height: 1.6; /* Mejora la legibilidad del texto */
-    color: #333; /* Color de texto oscuro para mejor contraste */
-    margin-top: 0;
-  }
-  
-  .markdown-body p {
-    margin-bottom: 1em; /* Espacio entre párrafos */
-  }
-  
-  .markdown-body br {
-    display: block;
-    content: "";
-    margin: 1em 0; /* Espacio vertical alrededor de los saltos de línea */
-  }
-  
-  .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
-    margin-top: 1.5em; /* Espacio antes de los encabezados */
-    margin-bottom: 0.5em; /* Espacio después de los encabezados */
-    font-weight: bold; /* Encabezados en negrita */
-  }
-  
-  .markdown-body ul, .markdown-body ol {
-    margin-left: 1.5em; /* Sangría para listas */
-  }
-  
-  .markdown-body li {
-    margin-bottom: 0.5em; /* Espacio entre elementos de lista */
-  }
-  
-  .markdown-body blockquote {
-    padding: 10px 20px; /* Padding para citas */
-    margin: 1em 0; /* Espacio alrededor de las citas */
-    border-left: 4px solid #ddd; /* Borde izquierdo para citas */
-    background-color: #f9f9f9; /* Fondo gris claro para citas */
-  }
-  
-  .markdown-body code {
-    background-color: #f4f4f4; /* Fondo gris claro para bloques de código */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 2px 4px; /* Padding alrededor del código */
-    font-size: 0.9em; /* Tamaño de fuente ligeramente más pequeño */
-  }
-  
-  .markdown-body pre code {
-    background-color: #f4f4f4; /* Fondo gris claro para código preformateado */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px; /* Padding alrededor del código */
-    display: block; /* Asegura que el código ocupe todo el ancho disponible */
-    white-space: pre; /* Mantiene los saltos de línea y espacios en el código */
-    overflow-x: auto; /* Habilita el desplazamiento horizontal si es necesario */
-  }
-  
+  padding: 20px; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Asegura una fuente legible */
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+  color: #333; /* Color de texto oscuro para mejor contraste */
+  margin: 2%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea el contenido al inicio (arriba) */
+  height: 100%; /* Ocupa todo el espacio disponible */
+}
+
+.markdown-body p {
+  margin-bottom: 1em; /* Espacio entre párrafos */
+}
+
+.markdown-body br {
+  display: block;
+  content: "";
+  margin: 1em 0; /* Espacio vertical alrededor de los saltos de línea */
+}
+
+::ng-deep .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  margin-top: 1.5em; /* Espacio antes de los encabezados */
+  margin-bottom: 10em; /* Espacio después de los encabezados */
+  font-weight: bold; /* Encabezados en negrita */
+  display: block;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-left: 1.5em; /* Sangría para listas */
+}
+
+.markdown-body li {
+  margin-bottom: 0.5em; /* Espacio entre elementos de lista */
+}
+
+.markdown-body blockquote {
+  padding: 10px 20px; /* Padding para citas */
+  margin: 1em 0; /* Espacio alrededor de las citas */
+  border-left: 4px solid #ddd; /* Borde izquierdo para citas */
+  background-color: #f9f9f9; /* Fondo gris claro para citas */
+}
+
+.markdown-body code {
+  background-color: #f4f4f4; /* Fondo gris claro para bloques de código */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 2px 4px; /* Padding alrededor del código */
+  font-size: 0.9em; /* Tamaño de fuente ligeramente más pequeño */
+}
+
+.markdown-body pre code {
+  background-color: #f4f4f4; /* Fondo gris claro para código preformateado */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px; /* Padding alrededor del código */
+  display: block; /* Asegura que el código ocupe todo el ancho disponible */
+  white-space: pre; /* Mantiene los saltos de línea y espacios en el código */
+  overflow-x: auto; /* Habilita el desplazamiento horizontal si es necesario */
+}
+
+::ng-deep .custom-markdown-image {
+  max-width: 90vw;
+  max-height: 50vh;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

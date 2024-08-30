@@ -1,0 +1,14 @@
+[debug] [2024-08-30T23:46:24.815Z] ----------------------------------------------------------------------
+[debug] [2024-08-30T23:46:24.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\fabia\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-30T23:46:24.817Z] CLI Version:   13.16.0
+[debug] [2024-08-30T23:46:24.817Z] Platform:      win32
+[debug] [2024-08-30T23:46:24.817Z] Node Version:  v20.17.0
+[debug] [2024-08-30T23:46:24.818Z] Time:          Fri Aug 30 2024 17:46:24 GMT-0600 (Central Standard Time)
+[debug] [2024-08-30T23:46:24.818Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-30T23:46:24.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-30T23:46:24.855Z] > authorizing via signed-in user (ramirezfabian003@gmail.com)
+[debug] [2024-08-30T23:46:24.855Z] [iam] checking project inputscr-db for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-30T23:46:24.856Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/inputscr-db:testIamPermissions [none]
+[debug] [2024-08-30T23:46:24.856Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/inputscr-db:testIamPermissions x-goog-quota-user=projects/inputscr-db
+[debug] [2024-08-30T23:46:24.856Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/inputscr-db:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}

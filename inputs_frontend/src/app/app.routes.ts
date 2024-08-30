@@ -4,9 +4,9 @@ import { ServiceInfoComponent } from './sections/services/service-info/service-i
 import { FAQsMainComponent } from './sections/FAQs/faqs-main/faqs-main.component';
 
 export  const routes: Routes = [
-    {path: "", redirectTo: "inicio", pathMatch: "full"},
-    {path: "inicio", component: LandingPageComponent },
-    { path: 'servicios/:serviceName', component: ServiceInfoComponent },
-    { path: 'PreguntasFrecuentes', component: FAQsMainComponent },
+    {path: "", redirectTo: "inicio", pathMatch: "full", title: 'Inputs Salud',},
+    {path: "inicio", component: LandingPageComponent, title: 'Inputs Salud'},
+    { path: 'servicios/:serviceName', component: ServiceInfoComponent, title: 'Inputs-Servicios' },
+    { path: 'PreguntasFrecuentes', component: FAQsMainComponent, title: 'Inputs-Preguntas frecuentes'},
     { path: '**', redirectTo: '' }
   ];

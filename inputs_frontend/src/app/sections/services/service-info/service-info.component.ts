@@ -49,7 +49,12 @@ export class ServiceInfoComponent implements OnInit {
           try {
             // Configurar marked para manejar saltos de línea
             const renderer = new marked.Renderer();
-            renderer.paragraph = (text) => `<p>${text}</p>\n`; // Asegura que los saltos de línea en párrafos se mantengan
+            renderer.paragraph = (text) => `<p>${text}</p>\n`;
+            renderer.image = (href: string, title: string, text: string) => {
+              // Añade una clase CSS personalizada a las imágenes
+              return `<img src="${href}" title="${title || ''}" alt="${text}" class="custom-markdown-image" />`;
+            };
+            
 
             marked.setOptions({
               renderer: renderer,
